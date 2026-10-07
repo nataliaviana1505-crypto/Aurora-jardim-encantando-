@@ -1,15 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Aurora • 1 aninho</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aurora — 1 Aninho | Jardim Encantado</title>
 <style>
-*{box-sizing:border-box}html,body{margin:0;padding:0;background:#fff4f7}body{font-family:Georgia,serif;display:flex;justify-content:center}.page{width:min(100vw,760px);position:relative}.art{width:100%;display:block}.video{position:absolute;left:9.6%;top:2.5%;width:80.8%;height:18.9%;border-radius:28px;overflow:hidden;border:3px solid rgba(255,220,228,.95);box-shadow:0 7px 20px rgba(100,60,80,.15);background:#eadce0}.video video{width:100%;height:100%;object-fit:cover;display:block}.video:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,20,30,.05),rgba(40,20,30,.16));pointer-events:none}.video-title{position:absolute;z-index:2;inset:38% 5% auto;text-align:center;color:white;text-shadow:0 2px 8px rgba(70,40,50,.55);pointer-events:none}.video-title .small{font-size:clamp(12px,2.4vw,20px)}.video-title .script{font-size:clamp(26px,6vw,54px);font-style:italic;font-weight:500}.video-title .invite{font-size:clamp(11px,2.1vw,18px);margin-top:7px}.sound{position:absolute;z-index:4;right:12px;top:12px;width:42px;height:42px;border-radius:50%;border:2px solid white;background:rgba(255,255,255,.78);font-size:18px}.hit{position:absolute;z-index:5;left:16.5%;width:67%;height:4.1%;border-radius:999px;background:transparent;border:0;cursor:pointer}.gifts{top:49.2%}.maps{top:54.2%}.rsvp{top:59.1%}.rsvp-note{position:absolute;z-index:5;left:22%;width:56%;top:65.3%;height:7%;display:flex;align-items:center;justify-content:center;text-align:center;color:transparent;font-size:12px}.gift-panel{display:none;position:absolute;z-index:8;left:17%;top:49%;width:66%;padding:18px;background:rgba(255,250,248,.97);border:1px solid #e5b9c6;border-radius:22px;text-align:center;color:#805d69;box-shadow:0 10px 30px rgba(100,60,80,.2);font-size:18px;line-height:1.6}.gift-panel.show{display:block}.close{margin-top:8px;border:0;background:#f6dce6;border-radius:999px;padding:8px 18px;color:#8b5e6e}.bottom-link{position:absolute;bottom:1.5%;left:0;right:0;height:2%;display:block}.loading{position:fixed;inset:0;background:#fff7f9;display:flex;align-items:center;justify-content:center;color:#a16b7b;z-index:20;font-size:15px}.ready .loading{display:none}
-</style></head>
-<body><div class="page" id="page"><div class="loading">Carregando o Jardim Encantado… 🦋</div><img class="art" src="site-arte.png" alt="Convite Jardim Encantado da Aurora">
-<section class="video"><video id="video" playsinline autoplay muted loop><source src="VID_20261005_094720.mp4" type="video/mp4"></video><div class="video-title"><div class="small">Um dia mágico no</div><div class="script">Jardim Encantado</div><div class="invite">Você é nosso convidado especial! 💗</div></div><button class="sound" id="sound">🔇</button></section>
-<a class="hit gifts" href="#" aria-label="Sugestões de presentes" onclick="openGifts(event)"></a><a class="hit maps" href="https://maps.app.goo.gl/EoG3ntPtkEpegEkg9" target="_blank" aria-label="Como chegar"></a><a class="hit rsvp" href="https://wa.me/5531971444254?text=Ol%C3%A1%21%20Confirmo%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%201%20ano%20da%20Aurora.%20%F0%9F%A6%8B%F0%9F%92%97" target="_blank" aria-label="Confirmar presença"></a>
-<div class="gift-panel" id="giftPanel">🧸 Brinquedos<br>👟 Calçados: 20 e 21/22<br>👗 Roupas: tamanho 1 e 2<br><small>Ou o que você escolher com carinho! 💗</small><br><button class="close" onclick="closeGifts()">Fechar</button></div>
-<a class="bottom-link" href="#" aria-label="Voltar ao topo"></a></div>
-<script>const page=document.getElementById('page');window.addEventListener('load',()=>page.classList.add('ready'));const v=document.getElementById('video'),s=document.getElementById('sound');s.onclick=()=>{v.muted=!v.muted;s.textContent=v.muted?'🔇':'🔊';v.play()};function openGifts(e){e.preventDefault();document.getElementById('giftPanel').classList.add('show')}function closeGifts(){document.getElementById('giftPanel').classList.remove('show')}</script>
-</body></html>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#f9eee9;color:#8f526d;font-family:Georgia,'Times New Roman',serif}
+  body{min-height:100vh;display:flex;justify-content:center}
+  .page{width:min(100%,1024px);position:relative;background:#fdf5ef;overflow:hidden}
+  .art{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+  .video-wrap{position:absolute;left:14.15%;top:3.63%;width:73.15%;height:25.45%;border-radius:0 0 4.2% 4.2%;overflow:hidden;background:#8b6a6c;box-shadow:0 5px 18px rgba(120,76,90,.18)}
+  .video{width:100%;height:100%;object-fit:cover;display:block}
+  .video-shade{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(30,20,20,.04),rgba(40,20,35,.18) 65%,rgba(50,20,40,.38));pointer-events:none}
+  .video-title{position:absolute;left:5%;right:5%;bottom:7%;text-align:center;color:white;text-shadow:0 2px 8px rgba(50,20,30,.55);pointer-events:none;line-height:1.05}
+  .video-title .small{font-size:clamp(13px,2.6vw,31px)}
+  .video-title .big{font-size:clamp(22px,4.4vw,50px);font-style:italic}
+  .video-title .invite{margin-top:1.8%;font-size:clamp(11px,2vw,22px)}
+  .sound{position:absolute;right:2.3%;top:4.2%;width:9.3%;aspect-ratio:1;border-radius:50%;border:2px solid rgba(255,255,255,.85);background:rgba(218,145,168,.88);color:#fff;font-size:clamp(17px,3vw,31px);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 3px 10px rgba(100,50,70,.22);z-index:3}
+  .sound:active{transform:scale(.96)}
+  .hotspot{position:absolute;z-index:5;cursor:pointer;border:0;background:transparent;padding:0}
+  .hotspot:focus-visible{outline:3px solid #d68ba8;outline-offset:3px;border-radius:30px}
+  .gift{left:24.6%;top:63.8%;width:50.8%;height:4.9%}
+  .maps{left:24.6%;top:70.25%;width:50.8%;height:4.85%}
+  .rsvp{left:24.6%;top:76.25%;width:50.8%;height:4.9%}
+  .hint{position:absolute;z-index:6;left:50%;transform:translateX(-50%);top:81.8%;width:80%;text-align:center;font-size:clamp(12px,2vw,20px);color:#8e5267;opacity:.95;pointer-events:none}
+  .modal{position:fixed;inset:0;background:rgba(80,45,60,.38);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}
+  .modal.open{display:flex}
+  .box{width:min(92vw,480px);background:linear-gradient(145deg,#fffaf5,#f9e7e8);border:2px solid #e3b0bf;border-radius:28px;padding:28px 24px;box-shadow:0 20px 60px rgba(80,40,60,.28);text-align:center;position:relative}
+  .box h2{margin:0 0 16px;font-size:27px;color:#b65c82;font-weight:normal}
+  .box p{margin:8px 0;color:#81586a;font-size:18px;line-height:1.5}
+  .close{position:absolute;right:12px;top:10px;border:0;background:none;color:#b65c82;font-size:28px;cursor:pointer}
+  .after{padding:34px 24px 50px;text-align:center;background:linear-gradient(#fff8f4,#f7e5e5)}
+  .after h2{font-size:30px;font-weight:normal;color:#b45f7f;margin:0 0 12px;font-style:italic}
+  .after p{font-size:17px;line-height:1.6;color:#7d5c68;max-width:620px;margin:8px auto}
+  .heart{font-size:26px}
+  @media(max-width:600px){
+    .hint{font-size:11px}
+    .box{padding:24px 18px}
+    .box h2{font-size:23px}.box p{font-size:16px}
+  }
+</style>
+</head>
+<body>
+<main class="page" aria-label="Convite digital de 1 ano da Aurora">
+  <img class="art" src="convite-aurora.png" alt="Convite Jardim Encantado — Aurora 1 aninho">
+
+  <section class="video-wrap" aria-label="Vídeo do convite">
+    <video id="video" class="video" playsinline autoplay muted loop preload="metadata">
+      <source src="VID_20261005_094720.mp4" type="video/mp4">
+    </video>
+    <div class="video-shade"></div>
+    <div class="video-title">
+      <div class="small">Um dia mágico no</div>
+      <div class="big">Jardim Encantado</div>
+      <div class="invite">Você é nosso convidado especial! 💗</div>
+    </div>
+    <button id="sound" class="sound" aria-label="Ativar som">🔇</button>
+  </section>
+
+  <button class="hotspot gift" aria-label="Sugestões de presentes" onclick="openGifts()"></button>
+  <a class="hotspot maps" aria-label="Como chegar" href="https://maps.app.goo.gl/EoG3ntPtkEpegEkg9" target="_blank" rel="noopener"></a>
+  <a class="hotspot rsvp" aria-label="Confirmar presença" href="https://wa.me/5531971444254?text=Ol%C3%A1!%20Confirmo%20minha%20presen%C3%A7a%20no%20anivers%C3%A1rio%20de%201%20ano%20da%20Aurora.%20%F0%9F%A6%8B%F0%9F%92%97" target="_blank" rel="noopener"></a>
+
+  <div class="hint">Toque nos botões para interagir com o convite 🦋</div>
+
+  <section class="after">
+    <div class="heart">🌸 🦋 🌸</div>
+    <h2>Será um dia inesquecível!</h2>
+    <p>Preparamos tudo com muito carinho para celebrar o primeiro aninho da nossa pequena Aurora. Esperamos você para viver esse momento especial conosco! 🌸🦋</p>
+    <p><em>Com carinho, família da Aurora 💗</em></p>
+  </section>
+</main>
+
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="giftTitle" onclick="closeIfOutside(event)">
+  <div class="box">
+    <button class="close" onclick="closeGifts()" aria-label="Fechar">×</button>
+    <h2 id="giftTitle">🎁 Sugestões de presentes</h2>
+    <p>🧸 Brinquedos</p>
+    <p>👟 Calçados: <strong>20 e 21/22</strong></p>
+    <p>👗 Roupas: <strong>tamanho 1 e 2</strong></p>
+    <p>Ou o que você escolher com carinho! 💗</p>
+  </div>
+</div>
+
+<script>
+const video=document.getElementById('video');
+const sound=document.getElementById('sound');
+const modal=document.getElementById('modal');
+
+sound.addEventListener('click', async (e)=>{
+  e.stopPropagation();
+  video.muted=!video.muted;
+  sound.textContent=video.muted?'🔇':'🔊';
+  sound.setAttribute('aria-label',video.muted?'Ativar som':'Desativar som');
+  if(!video.paused){try{await video.play()}catch(_) {}}
+});
+
+video.addEventListener('click',()=>{ if(video.paused) video.play(); else video.pause(); });
+function openGifts(){modal.classList.add('open');document.body.style.overflow='hidden'}
+function closeGifts(){modal.classList.remove('open');document.body.style.overflow=''}
+function closeIfOutside(e){if(e.target===modal)closeGifts()}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGifts()});
+</script>
+</body>
+</html>
